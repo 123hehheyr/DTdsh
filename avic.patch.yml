@@ -1,0 +1,9 @@
+# Local development overlay for the Avic RAG plugin. Not part of any shipped profile.
+# Source-launch dev loading points directly at the .ts module (tsx resolves
+# workspace imports through tsconfig paths); no build or pnpm install needed.
+# Usage:
+#   pnpm dsh web --patch ./avic.patch.yml --port 3180 --no-open
+#   pnpm dsh headless --patch ./avic.patch.yml "your task"
+- insert:
+    - id: agent-avic
+      name: 'C:/Users/l''w''b/Desktop/dsh/deepseek-harness/packages/core/agent-avic/src/index.ts'
